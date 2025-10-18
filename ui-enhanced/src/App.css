@@ -1,0 +1,114 @@
+/* Layout scaffold */
+#root {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 1440px;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 24px;
+  align-items: start;
+}
+
+.viewer {
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+}
+
+.thumbs {
+  display: grid;
+  gap: 10px;
+}
+
+.thumb {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-elevated);
+}
+
+.canvas {
+  min-height: 520px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  background:
+    radial-gradient(60% 40% at 60% 20%, rgba(255,255,255,0.06), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.05)),
+    var(--color-surface);
+  display: grid;
+  place-items: center;
+}
+
+.panel {
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent), var(--color-surface);
+  padding: 16px;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 12px 4px 12px;
+}
+
+.title { font-size: 18px; font-weight: 600; }
+.price { font-size: 14px; }
+.muted { color: var(--color-text-muted); }
+
+.section {
+  margin-top: 8px;
+  border-top: 1px solid var(--color-border);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 8px;
+  cursor: pointer;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  padding: 0 8px 14px 8px;
+}
+
+.swatch {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 2px solid var(--color-surface);
+  outline: 2px solid var(--color-border);
+}
+
+.swatch[aria-checked="true"] {
+  outline-color: var(--accent);
+  outline-width: 3px;
+}
+
+.cta {
+  display: flex;
+  gap: 10px;
+  padding: 12px 8px 8px 8px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
